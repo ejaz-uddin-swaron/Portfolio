@@ -1,0 +1,16 @@
+{
+  "name": "Ejaz Uddin Swaron | Portfolio",
+  "short_name": "Swaron",
+  "start_url": "/Assignment1SDT/",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#38bdf8",
+  "icons": [
+    {
+      "src": "logo-background-removed.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
