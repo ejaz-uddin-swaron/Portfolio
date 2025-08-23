@@ -15,7 +15,7 @@ It serves as a gateway to showcase my projects, skills, and experience.
 
 ---
 
-## 🧑‍💻 My Focus Areas
+## 🔥 My Focus Areas
 - **Backend Development**: Django, REST APIs, Supabase, Databases  
 - **AI / Machine Learning**: Python, Pandas, OpenCV, Mediapipe, Deep Learning fundamentals  
 - **Problem Solving**: 400+ problems solved on LeetCode, experience with Codeforces & HackerRank  
