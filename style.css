@@ -116,7 +116,8 @@ img#siteLogo{ background: transparent; height: 56px; width: auto; }
 .hero-section{
     background: radial-gradient(1200px 600px at 10% 0%, rgba(56,189,248,.10), transparent),
                             radial-gradient(1200px 600px at 90% 20%, rgba(32,201,151,.10), transparent),
-                            linear-gradient(180deg, #f8fbff 0%, #ffffff 60%);
+              linear-gradient(180deg, #f8fbff 0%, #ffffff 60%);
+  padding-top: 3.5rem; /* ensure space below sticky navbar */
 }
 [data-theme="dark"] .hero-section{
     background: radial-gradient(1200px 600px at 10% 0%, rgba(56,189,248,.10), transparent),
@@ -125,24 +126,26 @@ img#siteLogo{ background: transparent; height: 56px; width: auto; }
 }
 .hero-photo{ display:none; }
 .hero-photo-frame{
-    width: 80%;
-    max-width: 420px;
-    aspect-ratio: 3 / 4;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(56,189,248,.2);
+  width: 80%;
+  max-width: 420px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(56,189,248,.2);
 }
 .hero-photo-img{
-    width:100%; height:100%;
-    object-fit: cover;
-    object-position: center top; /* crop below chest by focusing on upper area */
-    display:block;
+  width:100%;
+  height:auto; /* let image decide the height so no extra box */
+  object-fit: contain;
+  object-position: center top;
+  display:block;
+  border-radius: 32px; /* soften visible edges in case frame overflows */
+  transform: translateY(-8px); /* gently push image upward */
 }
 
-/* Pull hero text up more on larger screens without affecting the image */
-@media (min-width: 768px){ .hero-text{ margin-top: -36px; } }
-@media (min-width: 992px){ .hero-text{ margin-top: -88px; } }
-@media (min-width: 1200px){ .hero-text{ margin-top: -110px; } }
+/* Hero text: keep a simple positive margin so it never goes under navbar */
+.hero-text{
+  margin-top: 0.5rem;
+}
 
 .social-links a{ color:var(--brand); }
 .social-links a:hover{ color:var(--brand-600); transform: translateY(-1px); }
@@ -172,7 +175,7 @@ img#siteLogo{ background: transparent; height: 56px; width: auto; }
 }
 
 /* Sections */
-section{ scroll-margin-top: 80px; }
+section{ scroll-margin-top: 96px; }
 
 /* Cards */
 .card{
@@ -252,17 +255,12 @@ footer .text-center a:hover{ color:#e0f2fe; }
 [data-theme="dark"] #interests .col-md-4.bg-light{ background-color:#0b2b3a !important; }
 
 /* ===== Animations ===== */
-/* Reveal base */
-.reveal{ opacity:0; transform: translateY(20px); will-change: opacity, transform; }
-.reveal{ transition: opacity .7s ease, transform .7s cubic-bezier(.2,.65,.2,1); }
+/* Reveal base: use opacity only (no vertical shift) so layout stays fixed */
+.reveal{ opacity:0; will-change: opacity; }
+.reveal{ transition: opacity .7s ease; }
 .reveal.show{ opacity:1; transform:none; transition: opacity .7s ease, transform .7s cubic-bezier(.2,.65,.2,1); }
 
-/* Variants */
-.reveal[data-reveal="fade-up"]{ transform: translateY(24px); }
-.reveal[data-reveal="fade-down"]{ transform: translateY(-24px); }
-.reveal[data-reveal="slide-left"]{ transform: translateX(-28px); }
-.reveal[data-reveal="slide-right"]{ transform: translateX(28px); }
-.reveal[data-reveal="zoom-in"]{ transform: scale(.96); }
+/* Variants: attributes are kept for semantics; visuals use base fade only */
 
 /* Floating image */
 @keyframes floatY{ 0%{ transform: translateY(0); } 50%{ transform: translateY(-10px); } 100%{ transform: translateY(0); } }
@@ -308,7 +306,7 @@ footer .text-center a:hover{ color:#e0f2fe; }
 /* --- Responsive improvements --- */
 @media (max-width: 575.98px) {
   .hero-section {
-    padding-top: 2rem !important;
+    padding-top: 3.25rem !important; /* extra space so badge always clears navbar */
     padding-bottom: 2rem !important;
   }
   .hero-text {
@@ -320,6 +318,7 @@ footer .text-center a:hover{ color:#e0f2fe; }
     margin-right: auto;
     width: 100% !important;
     max-width: 320px !important;
+    border-radius: 24px;
   }
   .btn-lg, .btn {
     width: 100%;
