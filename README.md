@@ -34,7 +34,7 @@ It serves as a gateway to showcase my projects, skills, and experience.
 - **Name:** Ejaz Uddin Swaron  
 - **GitHub:** [ejaz-uddin-swaron](https://github.com/ejaz-uddin-swaron)  
 - **Email:** *swaron3214@gmail.com*  
-- **LinkedIn:** *[(https://www.linkedin.com/in/ejaz-uddin-swaron/)]*  
+- **LinkedIn:** *[ejaz-uddin-swaron](https://www.linkedin.com/in/ejaz-uddin-swaron/)*  
 
 ---
 
