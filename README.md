@@ -33,8 +33,8 @@ It serves as a gateway to showcase my projects, skills, and experience.
 ## 📬 Contact
 - **Name:** Ejaz Uddin Swaron  
 - **GitHub:** [ejaz-uddin-swaron](https://github.com/ejaz-uddin-swaron)  
-- **Email:** *(add your email if you want recruiters to reach you)*  
-- **LinkedIn:** *(optional link here)*  
+- **Email:** *swaron3214@gmail.com*  
+- **LinkedIn:** *[(optional link here)](https://www.linkedin.com/in/ejaz-uddin-swaron/)*  
 
 ---
 
